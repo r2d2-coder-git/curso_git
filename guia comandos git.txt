@@ -1,0 +1,130 @@
+GUIA DE GIT :
+
+
+Comandos Básicos : 
+
+ 1º) git init --> iniciamos un proyecto en git en la carpeta en la  que estemos situados en ese momento en el bash
+
+2º) git status -->vemos si algun archivo esta en el escenario o si hay archivos que fueron modificados  y no guardados.
+
+3º) git add (lo que sigue podemos poner lo que queramos añadir al escenario , podemos usar comando *, . (lo añade todo), etc..
+
+4º) git commit -m "comentario especifico" (lo que hace es hacer un screenshot del escenario en ese momento con los archivos que le hemos 
+mandado con el add, además hay que añadir un comentario)
+
+5º) git log ( nos enseña todos los commit que hemos hecho hasta la fecha en ese repositorio, en forma de pila)
+
+Alias: 
+
+
+Podemos crear nuestros propios alias de comandos para que no se nos hagan tan largos, hemos creado hasta el momento con el comando :
+* git config --global alias.(comoqueramos definir el alias ) "comando que queremos acortar.
+EJEMPLO:
+
+ *** git config --global alias.lg "log --oneline --decorate --graph --all" *** IMPORTANTE!
+
+a) git s  == git status -sb
+
+b) git lg  === git log --oneline --decorate --graph --all
+
+
+**EXCLUIR ARCHIVOS CON EL GITIGNORE** 
+Se tiene que crear un archivo llamado .gitignore en el cual tienes que poner todos los archivos / carpetas que se quiere ignorar y únicamente hay que añadir 
+al escenario el archivo .gitignore para saber cuáles tiene que ignorar git. 
+
+
+**MAS COMANDOS DE USO**
+
+1) git diff  -->(te dice que codigo ha cambiado desde la ultima vez que lo tocaste )
+
+2) git diff -- staged -->(te dice que codigo que esta en el stage (escenario) ha cambiado y no has hecho el snapshot (commit)) 
+
+3)git reset *nombre_Archivo*  -->( te quita del stage el archivo que le indiques)
+
+4) git checkout --> Recupera el repositorio a como estaba antes
+
+5) git checkout -- nombre_archivo -->Recupera un archivo a como estaba en el ultimo commit hecho.
+
+6) git commit -amend -m "comentario arreglado" -->Arragla el comentario del ultimo commit hecho.
+
+7)git reset --soft HEAD^  --> te lleva al último commit antes del header. ( Desapilas el header)
+
+8)git reset --soft *id* -->deja apuntando el head al commit con el id marcado en el comando.
+
+9) git reset --hard *id* -->deja apuntando el head al id indicado y ademas borra todo lo cambiado por los commits que se esta comiendo. 
+
+10) git reflog  --> te da una lista con todos los commits hechos en el repositorio, para volver a alguno si hace falta. !IMPORTANTE!
+
+11)git mv nombre_fichero_actual nuevo_nombre_fichero  -->cambia el nombre de un fichero del repositorio(hacer commit)
+
+12)git rm nombre fichero --> Deletea un fichero del repositorio, no olvidar hacer un commit para guardar el deleteo. 
+
+
+
+***RAMAS***
+
+comandos_:
+
+
+1) git branch nombre-rama --> esto crea una rama con el nombre que le indiques.
+
+2) git branch --> te enseña todas las ramas y en la que estas.
+
+3) git checkout nombre-rama --> asi te cambias a la rama que le indiques.
+
+4) git diff nombre-rama master --> te dice las diferencias entre la rama indicada y el master.
+
+5) git branch -d nombre-rama --> borra la rama que le indiques.
+
+6) git checkout -b nombre-rama --> salta a la rama que estas creando en el momento.
+
+
+**GIT MERGE: Esta unión de ramas se hace cuando se ha bifurcado el master pero no se ha realizado nada en el después de la ramificacion.
+
+1º) GIT CHECKOUT MASTER -->NOS POSICIONAMOS EN LA RAMA QUE QUERAMOS UNIR 
+
+2º) GIT MERGE NOMBRE-RAMA --> RAMA QUE QUEREMOS AÑADIR AL MASTER 
+
+
+
+
+****TAGS*******
+
+1)Git tag -a v1.0.0 -m "version 1.0.0"  --> crea una etiqueta
+
+2) git tag --> enseña las etiquetas que hay 
+
+3) git tag -a v0.1.0 hexadecimal -m "version alpha" --> en un commit concreto se crea una etiqueta
+
+4) git show nombre-tag --> te dice todo acerca de la etiqueta.
+
+
+***STASH *** Es como un contenedor que te permite almacenar el trabajo como lo tienes en un punto concreto y necesario y luego puedes sacarlo para volver a trabajar con el.
+
+1) git stash -->  Creas el stash del repositorio en el que estes trabajando.
+
+2) git stash list --> te muestra la lista de todos los stash.
+
+3) git stash pop --> desapila el stash creado por ultima vez y deja los cambios sin guardar en git.
+
+4) git stash drop --> borra el ultimo registro que estaba en el stash
+
+5) git stash apply --> recupera el ultimo stash realizado.
+
+******REBASE**********
+Sirve para: 
+1) ordenar commits 
+2) corregir mensajes de los commits.
+3) unir commits 
+4) separar commits
+
+
+
+*********GITHUB***************
+
+1) git remote add origin direccion repositorio --> añadir cosas al repositorio.
+
+
+
+
+
