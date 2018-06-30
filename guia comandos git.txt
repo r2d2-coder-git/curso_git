@@ -124,7 +124,26 @@ Sirve para:
 
 1) git remote add origin direccion repositorio --> añadir cosas al repositorio.
 
+** SUBIR REPOSITORIOS A GITHUB DESDE CONSOLA** PUSH 
 
+COMANDOS 
+ 
+1º) git remote add origin https://github.com/smitexx/udemy-heroes.git --> Te lo da github
 
+2º) git remote -v  --> para ver si todo esta correcto 
 
+3º) git push -u origin master --> para meter las credenciales de github .
+
+4º) git push --tags -->sube todas las versiones creadas en el repositorio.
+
+**Pull
+
+1) git pull -->El pull lo descarga, intenta hacer el merge y si falla, entra en un modo para resolución de conflictos manuales
+
+**Fetch 
+
+1) git fetch --> El fetch lo descarga todo y no hace nada automático por ti
+
+**CLONAR REPOSITORIOS.
+1) git clone *url repositorio a clonar* *nombre de carpeta que va a contener el repositorio* ---> se descarga el repositorio donde tu quieras.
 
