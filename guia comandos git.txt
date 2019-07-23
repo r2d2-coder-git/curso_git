@@ -130,7 +130,7 @@ COMANDOS
  
 1º) git remote add origin https://github.com/smitexx/udemy-heroes.git --> Te lo da github
 
-2º) git remote -v  --> para ver si todo esta correcto 
+2º) git remote -v  --> para ver los repositorios remotos
 
 3º) git push -u origin master --> para meter las credenciales de github .
 
