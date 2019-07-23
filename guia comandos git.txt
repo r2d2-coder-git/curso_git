@@ -98,7 +98,9 @@ comandos_:
 
 4) git show nombre-tag --> te dice todo acerca de la etiqueta.
 
-5) git push nombre-remoto vX.X.X --> se pushea con la versión indicada
+5) git push nombre-remoto rama --tags --> se pushean los tags creados, por defecto el push no añade tags.
+
+6) git tag -d nombre-etiqueta --> borra una etiqueta dada.
 
 
 ***STASH *** Es como un contenedor que te permite almacenar el trabajo como lo tienes en un punto concreto y necesario y luego puedes sacarlo para volver a trabajar con el.
