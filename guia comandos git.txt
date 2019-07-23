@@ -98,6 +98,8 @@ comandos_:
 
 4) git show nombre-tag --> te dice todo acerca de la etiqueta.
 
+5) git push nombre-remoto vX.X.X --> se pushea con la versión indicada
+
 
 ***STASH *** Es como un contenedor que te permite almacenar el trabajo como lo tienes en un punto concreto y necesario y luego puedes sacarlo para volver a trabajar con el.
 
