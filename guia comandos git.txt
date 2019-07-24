@@ -78,6 +78,10 @@ comandos_:
 
 6) git checkout -b nombre-rama --> salta a la rama que estas creando en el momento.
 
+7) git branch -v --> te enseña las ramas y el último commit al que apuntan.
+
+8) git branch -vv --> te enseña las ramas y el repositorio remoto con la rama de seguimiento del que fueron descargadas.
+
 
 **GIT MERGE: Esta unión de ramas se hace cuando se ha bifurcado el master pero no se ha realizado nada en el después de la ramificacion.
 
@@ -119,26 +123,29 @@ comandos_:
 Sirve para: 
 1) ordenar commits 
 2) corregir mensajes de los commits.
-3) unir commits 
+3) unir commits entre ramas 
 4) separar commits
 
 
 
 *********GITHUB***************
 
-1) git remote add origin direccion repositorio --> añadir cosas al repositorio.
+1) git remote add origin rama-repositorio --> añadir cosas al repositorio remoto en la rama indicada..
 
 ** SUBIR REPOSITORIOS A GITHUB DESDE CONSOLA** PUSH 
 
 COMANDOS 
  
-1º) git remote add origin https://github.com/smitexx/udemy-heroes.git --> Te lo da github
+1º) git remote add origin https://github.com/smitexx/udemy-heroes.git --> Te lo da github // le da el nombre origin al repositorio remoto de la URL.
 
 2º) git remote -v  --> para ver los repositorios remotos
 
 3º) git push -u origin master --> para meter las credenciales de github .
 
 4º) git push --tags -->sube todas las versiones creadas en el repositorio.
+
+5º) git push origin --delete nombre-rama --> elimina una rama del repositorio remoto.
+
 
 **Pull
 
