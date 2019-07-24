@@ -158,3 +158,41 @@ COMANDOS
 **CLONAR REPOSITORIOS.
 1) git clone *url repositorio a clonar* *nombre de carpeta que va a contener el repositorio* ---> se descarga el repositorio donde tu quieras.
 
+
+**********CONFIGURAR GIT EN UN SERVIDOR CON SSH**********************
+
+1º Exportar un repositorio vacío -->  git clone --bare my_project my_project.git
+
+2º Colocamos el repositorio vacío en el  server --> scp -r my_project.git user@git.example.com:/opt/git (Asumimos /opt/git como la ruta donde se aloja el repositorio remoto)
+
+3º Establecemos conexión con el servidor --> ssh user@git.example.com
+
+4ºNos cambiamos al directorio del repo-remoto e iniciamos el repo compartido --> 
+		cd /opt/git/my_project.git
+		git init --bare --shared
+
+GENERAR CLAVE PÚBLICA SSH: Se guardan en la carpeta /.ssh
+
+1ºssh-keygen
+2º mirar en la dirección ~/.ssh/  <-- ahí se almacena la privada y la pública.
+3º mkdir .ssh && chmod 700 .ssh
+   touch .ssh/authorized_keys && chmod 600 .ssh/authorized_keys
+4º añadir las claves públicas en authorized_keys
+5º crear repositorio para los usuarios --> 
+$ cd /opt/git
+$ mkdir project.git
+$ cd project.git
+$ git init --bare
+Initialized empty Git repository in /opt/git/project.git/
+
+
+
+
+
+
+
+
+
+
+
+
