@@ -78,6 +78,8 @@ comandos_:
 
 6) git checkout -b nombre-rama --> salta a la rama que estas creando en el momento.
 
+7) git branch -v --> te enseña las ramas y el último commit al que apuntan.
+
 
 **GIT MERGE: Esta unión de ramas se hace cuando se ha bifurcado el master pero no se ha realizado nada en el después de la ramificacion.
 
@@ -126,13 +128,13 @@ Sirve para:
 
 *********GITHUB***************
 
-1) git remote add origin direccion repositorio --> añadir cosas al repositorio.
+1) git remote add origin rama-repositorio --> añadir cosas al repositorio remoto en la rama indicada..
 
 ** SUBIR REPOSITORIOS A GITHUB DESDE CONSOLA** PUSH 
 
 COMANDOS 
  
-1º) git remote add origin https://github.com/smitexx/udemy-heroes.git --> Te lo da github
+1º) git remote add origin https://github.com/smitexx/udemy-heroes.git --> Te lo da github // le da el nombre origin al repositorio remoto de la URL.
 
 2º) git remote -v  --> para ver los repositorios remotos
 
