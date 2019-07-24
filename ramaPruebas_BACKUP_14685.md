@@ -1,6 +1,0 @@
-
-
-
-Intento conflicto con master
-
-
