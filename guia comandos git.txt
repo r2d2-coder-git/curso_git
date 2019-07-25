@@ -146,6 +146,8 @@ COMANDOS
 
 5º) git push origin --delete nombre-rama --> elimina una rama del repositorio remoto.
 
+6º) git push -u origin rama-local:rama-remota --> Hace un push del contenido de la rama-local en la rama-remota.
+
 
 **Pull
 
@@ -185,6 +187,10 @@ $ cd project.git
 $ git init --bare
 Initialized empty Git repository in /opt/git/project.git/
 
+
+*************BUENAS PRÁCTICAS AL USAR GIT EN PROYECTOS********************
+
+1) Antes de hacer commit ejecutar git diff --check --> nos dice si hay problemas de espacios en blanco
 
 
 
