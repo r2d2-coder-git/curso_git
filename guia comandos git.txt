@@ -106,6 +106,8 @@ comandos_:
 
 6) git tag -d nombre-etiqueta --> borra una etiqueta dada.
 
+7)git describe nombre-rama --> nos dice la última etiqueta puesta en esa rama.
+
 
 ***STASH *** Es como un contenedor que te permite almacenar el trabajo como lo tienes en un punto concreto y necesario y luego puedes sacarlo para volver a trabajar con el.
 
@@ -192,13 +194,31 @@ Initialized empty Git repository in /opt/git/project.git/
 
 1) Antes de hacer commit ejecutar git diff --check --> nos dice si hay problemas de espacios en blanco
 
+------------------------------------
+
+RECUPERAR RAMAS REMOTAS DE ALGUIEN:
+
+$ git remote add jessica git://github.com/jessica/myproject.git --> Añades el repo remoto
+$ git fetch jessica  --> Buscas los cambios (de primeras todos)
+$ git checkout -b rubyclient jessica/ruby-client --> creas una nueva rama desde el punto en el que se quedó el repo añadido.
 
 
+------------------------------------
+
+$ git merge-base contrib master --> sirve para ver el ancestro común entre 2 ramas (commit común más cercano en el tiempo)
+
+------------------------------------
+
+$git cherry-pick e43a6fd3e94888d76779ad79fb568ed180e5fcdf --> Integra el commit que le indicas en la rama en la que te encuentres, realizando un nuevo código SHA.
 
 
+------------------------------------
 
+git archive master --prefix='project/' | gzip > `git describe master`.tar.gz --> genera un fichero comprimido con todo el proyecto.
 
+-------------------------------------
 
+git shortlog --no-merges master --not v1.0.1 --> te muestra todos los commits que se hicieron desde la versión que se indique.
 
 
 
