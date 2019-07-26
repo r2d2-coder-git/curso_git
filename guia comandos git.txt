@@ -59,12 +59,15 @@ al escenario el archivo .gitignore para saber cuáles tiene que ignorar git.
 
 12)git rm nombre fichero --> Deletea un fichero del repositorio, no olvidar hacer un commit para guardar el deleteo. 
 
+13)git ls-remote https://github.com/schacon/blink --> Nos enseña los remotos y sus heads de un repositorio.
 
+14)git clean -d -n --> Clean borra los directorios y ficheros que no se le están dando seguimiento en el repositorio, la opción -n hace que solo te enseñe lo que borraría.
+
+15)git clean -f --> Fuerza el borrado de los ficheros y directorios.
 
 ***RAMAS***
 
 comandos_:
-
 
 1) git branch nombre-rama --> esto crea una rama con el nombre que le indiques.
 
@@ -109,7 +112,7 @@ comandos_:
 7)git describe nombre-rama --> nos dice la última etiqueta puesta en esa rama.
 
 
-***STASH *** Es como un contenedor que te permite almacenar el trabajo como lo tienes en un punto concreto y necesario y luego puedes sacarlo para volver a trabajar con el.
+***STASH *** Es como un contenedor que te permite almacenar el trabajo como lo tienes en un punto concreto y necesario y luego puedes sacarlo para volver a trabajar con el, sobre todo sirve para poder cambiar de ramas en el repositorio sin tener que hacer commit.
 
 1) git stash -->  Creas el stash del repositorio en el que estes trabajando.
 
