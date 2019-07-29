@@ -16,7 +16,6 @@ mandado con el add, además hay que añadir un comentario)
 
 Alias: 
 
-
 Podemos crear nuestros propios alias de comandos para que no se nos hagan tan largos, hemos creado hasta el momento con el comando :
 * git config --global alias.(comoqueramos definir el alias ) "comando que queremos acortar.
 EJEMPLO:
