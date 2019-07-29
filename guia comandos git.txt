@@ -91,8 +91,7 @@ comandos_:
 
 2º) GIT MERGE NOMBRE-RAMA --> RAMA QUE QUEREMOS AÑADIR AL MASTER 
 
-
-
+3º) GIT MERGE --abort --> aborta el merge en caso de conflictos.
 
 ****TAGS*******
 
@@ -223,4 +222,4 @@ git archive master --prefix='project/' | gzip > `git describe master`.tar.gz -->
 git shortlog --no-merges master --not v1.0.1 --> te muestra todos los commits que se hicieron desde la versión que se indique.
 
 
-
+********************TRABAJANDO CON SUBMODULOS****************************

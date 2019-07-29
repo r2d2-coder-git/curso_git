@@ -1,0 +1,3 @@
+[submodule "submodulo"]
+	path = submodulo
+	url = git@github.com:smitexx/submodulo
