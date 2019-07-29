@@ -223,3 +223,52 @@ git shortlog --no-merges master --not v1.0.1 --> te muestra todos los commits qu
 
 
 ********************TRABAJANDO CON SUBMODULOS****************************
+
+$ git submodule add https://github.com/chaconinc/DbConnector --> añades el submodulo al modulo principal.
+
+
+------------Clonar repositorio con submodulos------------------
+
+CLONAR REPOSITORIO Y ACTUALIZAR UN SUBMODULO
+
+1)git clone repositorio 
+2)cd submodulo
+3)git submodule init 
+4)git submodule update
+
+CLONAR REPOSITORIO CON SUBMODULOS
+
+$ git clone --recursive https://github.com/chaconinc/MainProject
+
+ACTUALIZAR CON SUBMODULOS
+
+$ git submodule update --remote --merge DbConnector --> actualiza el submodulo y no lo deja en un estado inconsistente.
+
+PUSH CON SUBMODULOS
+
+$ git push --recurse-submodules=on-demand --> Sube los cambios de los submodulos y después los cambios del repositorio principal, si la primera subida falla no se deja hacer el push principal.
+
+HACER CAMBIOS EN TODOS LOS SUBMODULOS A LA VEZ
+
+$ git submodule foreach 'git stash' --> Esto hace para cada uno de los submodulos git stash
+
+$ git submodule foreach 'git checkout -b featureA' --> Otro ejemplo, crea una rama en todos los subm.
+
+$ git diff; git submodule foreach 'git diff' --> DIFF de todo el repositorio con submodulos
+
+
+ALIAS PARA SUBMODULOS
+
+$ git config alias.sdiff '!'"git diff && git submodule foreach 'git diff'" --> diff de todo.
+$ git config alias.spush 'push --recurse-submodules=on-demand' --> pushear cambios de todo.
+$ git config alias.supdate 'submodule update --remote --merge' --> actualizar submodulos en local.
+
+
+
+
+
+
+
+
+
+
