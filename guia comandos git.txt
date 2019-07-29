@@ -44,7 +44,7 @@ al escenario el archivo .gitignore para saber cuáles tiene que ignorar git.
 
 5) git checkout -- nombre_archivo -->Recupera un archivo a como estaba en el ultimo commit hecho.
 
-6) git commit -amend -m "comentario arreglado" -->Arragla el comentario del ultimo commit hecho.
+6) git commit --amend -m "comentario arreglado" -->Arragla el comentario del ultimo commit hecho.
 
 7)git reset --soft HEAD^  --> te lleva al último commit antes del header. ( Desapilas el header)
 
