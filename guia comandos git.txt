@@ -84,6 +84,7 @@ comandos_:
 
 8) git branch -vv --> te enseña las ramas y el repositorio remoto con la rama de seguimiento del que fueron descargadas.
 
+9)git push origin :nombre-rama --> borra una rama en el repo remoto.
 
 **GIT MERGE: Esta unión de ramas se hace cuando se ha bifurcado el master pero no se ha realizado nada en el después de la ramificacion.
 
@@ -264,8 +265,21 @@ $ git config alias.spush 'push --recurse-submodules=on-demand' --> pushear cambi
 $ git config alias.supdate 'submodule update --remote --merge' --> actualizar submodulos en local.
 
 
+*************************COMANDOS DE FONTANERÍA*********************************
 
 
+1) git cat-file -p SHA-1-del-objeto --> te muesta el contenido del fichero del que se instanció el objeto en el formato correcto.
+
+2) git gc --> comprime todos los objects que han sido commiteados o tratados.
+
+3) git verify-pack -v objeto.idx --> nos devuelve toda la lista de objetos que contiene el archivo.
+
+*****************************RECUPERACIÓN DE ERRORES******************************
+
+
+1) git reflog --> Asi vemos el historico de commits que existe en el repo y seleccionamos para crear la rama.
+1bis) git fsck --full --> alternativa a reflog, te enseña todos los objetos que no tienen referencias a otros objetos.
+2) git branch nombre-rama SHA-1-commit que quieres recuperar 
 
 
 
